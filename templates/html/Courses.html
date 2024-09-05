@@ -1,0 +1,45 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+        .app{
+            text-decoration: none;
+            background-color: #56cfe8;
+            color: white;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 220px;
+            margin-left: 620px;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px 5px rgb(84, 79, 79);  
+        }
+        .app:hover{
+             color: black;
+             background-color: #2871b6;
+             color: rgb(179, 236, 255);
+    }    
+
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">This the courses page</h1>
+    <div class="apps">
+        <a href="{% url 'download_app' %}  " class="app">Download Simorg Archive app</a>
+    </div> 
+    
+</body>
+</html>
+
+{% endblock content %}

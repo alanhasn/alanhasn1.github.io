@@ -1,0 +1,64 @@
+{% extends 'html/base.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        h1,h4{
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+        }
+        h2{
+            color: white;
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+            color: rgb(59, 151, 201);
+
+        }
+
+        .course{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+        .course a{
+
+            background-color: #56cfe8;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #081015;
+            font-size: 20px;
+            text-decoration: none;   
+        }
+        .course a:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">About Us</h1>
+    <h2>see the best our courses: <strong> python , Linux , Cyber security , A+ , Django , HTML , CSS , Bootstrap , Java script </strong></h2>
+    <h4 style="color:rgb(59, 151, 201);">and take Exam after evry lesson Linux Exam , Python Exam ...etc</h4>
+    <div class="course"><a href="{% url 'courses' %}" >See Our courses</a>
+</div>
+</body>
+</html>
+
+{% endblock content %}

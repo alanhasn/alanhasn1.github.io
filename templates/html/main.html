@@ -1,0 +1,79 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome</title>
+    <style>
+        h1{
+            padding-left: 600px;
+            padding-top: 90px ;
+            font-size: 70px;
+        }
+        
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+    }
+    
+    .navbar-right a {
+      margin-left: 40px;
+      text-decoration: none;
+    }
+
+    .navbar-right .btn1 {
+      background-color: #56cfe8;
+      color: white;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100px;
+      margin-left: 620px;
+      color: black;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px 5px rgb(84, 79, 79);  
+    }
+
+    .navbar-right .btn1:hover {
+      background-color: #2871b6;
+      color: rgb(179, 236, 255);
+    }
+
+    .explain a{
+      color: #56cfe8;
+      margin-left: 550px ;
+    }
+    .explain a:hover{
+      color: #0025c8;
+      margin-left: 550px ;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Welcome to <br>  Our <br>Website</h1>
+    <div class="navbar-right">
+        {% if user.is_authenticated %}
+          <a href="{% url 'courses' %}" class="btn1">our Courses</a>
+        {% else %}
+             <div class="explain">
+               <a href="{% url 'signup' %}" > Please Signup or login To see our courses and program</a>
+             </div>  
+        {% endif %}
+      </div>
+    </div>
+</body>
+</html>
+
+
+{% endblock content %}
